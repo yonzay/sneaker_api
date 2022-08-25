@@ -1,0 +1,16 @@
+-cp Server
+-D js-es=6
+-cp server
+-cp externs/FastifyExterns
+-cp externs/FastifyExterns/lmr
+-cp externs/FastifyExterns/ajv
+-cp externs/MongoDBExterns
+-cp externs/node-rsa
+-cp externs/node
+-cp externs/colors
+-cp externs/bson
+-main DeadLockerAPI
+-lib hxnodejs
+-lib closure
+-js export/DeadLockerAPI.js
+-D closure_overwrite

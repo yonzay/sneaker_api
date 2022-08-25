@@ -1,0 +1,26 @@
+{
+	"devDependencies": {
+		"dts2hx": "^0.6.0",
+		"typescript": "^3.9.6",
+		"lix": "^15.9.1",
+		"fastify-tsconfig": "^1.0.1"
+	},
+	"scripts": {
+		"postinstall": "npx dts2hx colors && npx dts2hx node-rsa && npx dts2hx request && npx dts2hx node && npx dts2hx bson && cd externs && git clone https://github.com/omnicells/FastifyExterns.git && git clone https://github.com/omnicells/MongoDBExterns.git",
+		"build": "haxe build.hxml",
+		"haxe": "haxelib install hxnodejs 12.1.0 && haxelib install closure 0.3.1"
+	},
+	"dependencies": {
+		"@types/bson": "^4.0.3",
+		"@types/colors": "^1.2.1",
+		"@types/node": "^14.14.10",
+		"@types/node-rsa": "^1.0.0",
+		"colors": "^1.4.0",
+		"discord.js": "^12.5.3",
+		"fastify": "^3.9.1",
+		"mongodb": "^3.6.3",
+		"node-adyen-encrypt": "^2.3.1",
+		"node-rsa": "^1.1.1",
+		"request": "^2.88.2"
+	}
+}
