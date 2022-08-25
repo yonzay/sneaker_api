@@ -10,7 +10,7 @@ class Miscellaneous {
             request({
                 method: 'POST',
                 url: '$webhook',
-                json: {"username":"DeadLocker","avatar_url":"https://cdn.discordapp.com/avatars/829231405951221771/1c6f782e4f88175580fe53e98b68b613.png?size=128","embeds":[{"title":"The DeadLocker webhook","description":'```fix\nAnd the webhook was divine...\n```',"color":65530,"footer":{"text":"DeadLocker","icon_url":"https://cdn.discordapp.com/avatars/829231405951221771/1c6f782e4f88175580fe53e98b68b613.png?size=128"},"thumbnail":{"url":'https://cdn.discordapp.com/avatars/829231405951221771/1c6f782e4f88175580fe53e98b68b613.png?size=128'},"author":{"name":"DeadLocker","icon_url":"https://cdn.discordapp.com/avatars/829231405951221771/1c6f782e4f88175580fe53e98b68b613.png?size=128"}}]}
+                json: {"username":"","avatar_url":"","embeds":[{"title":"The webhook","description":'```fix\nAnd the webhook was divine...\n```',"color":65530,"footer":{"text":"","icon_url":""},"thumbnail":{"url":''},"author":{"name":"","icon_url":""}}]}
             }, function (error, response, body) { 
                 try {
                     callback(Json.stringify({"success":true, "code":response.statusCode}));
