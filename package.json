@@ -6,7 +6,7 @@
 		"fastify-tsconfig": "^1.0.1"
 	},
 	"scripts": {
-		"postinstall": "npx dts2hx colors && npx dts2hx node-rsa && npx dts2hx request && npx dts2hx node && npx dts2hx bson && cd externs && git clone https://github.com/omnicells/FastifyExterns.git && git clone https://github.com/omnicells/MongoDBExterns.git",
+		"postinstall": "npx dts2hx colors && npx dts2hx node-rsa && npx dts2hx request && npx dts2hx node && npx dts2hx bson && cd externs && git clone https://github.com/yonzay/FastifyExterns.git && git clone https://github.com/yonzay/MongoDBExterns.git",
 		"build": "haxe build.hxml",
 		"haxe": "haxelib install hxnodejs 12.1.0 && haxelib install closure 0.3.1"
 	},
