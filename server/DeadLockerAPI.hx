@@ -11,10 +11,10 @@ import utils.Miscellaneous;
 import Fastify; 
 import Mongodb;
 
-class DeadLockerAPI {
+class SneakerAPI {
     public static var sizeMap:Array<String> = ["01.0", "01.5", "02.0", "02.5", "03.0", "03.5", "04.0", "04.5", "05.0", "05.5", "06.0", "06.5", "07.0", "07.5", "08.0", "08.5", "09.0", "09.5", "10.0", "10.5", "11.0", "11.5", "12.0", "12.5", "13.0", "13.5", "14.0", "14.5", "15.0", "15.5", "16.0", "16.5", "17.0", "17.5", "18.0", "18.5", "19.0", "19.5", "20.0" ];
     public static var Discord = Syntax.code("require")("discord.js");
-    public static var client = Syntax.code("new DeadLockerAPI.Discord.Client")();
+    public static var client = Syntax.code("new SneakerAPI.Discord.Client")();
     public static var url = 'mongodb+srv://DeadLockerAdmin:1ijZJze5j7y0jiVB@cluster0.ekqdp.mongodb.net';
     public static var dbName = 'DeadLocker';
     public static var collections:Array<String> = ['Licenses', 'Sessions', 'Keys', 'CheckOuts'];
@@ -76,7 +76,7 @@ class DeadLockerAPI {
                 //write(Colors.cyan.call('Connected to MongoDB server at ') + Colors.underline.call(Colors.bold.call('$url'))); 
             }
         });
-        new DeadLockerAPI();
+        new SneakerAPI();
     }
 
     public var server = Fastify.fastify({
@@ -108,10 +108,10 @@ class DeadLockerAPI {
             monitorMap = []; 
             Syntax.code("
             try {
-                DeadLockerAPI.client.guilds.cache.get(\"841411716864540742\").channels.cache.find(ch => ch.name === 'log-alerts').messages.fetch({ limit: 100 }).then(messages => {
+                SneakerAPI.client.guilds.cache.get(\"\").channels.cache.find(ch => ch.name === 'log-alerts').messages.fetch({ limit: 100 }).then(messages => {
                     for (var x = 0; x < 100; x++) {
                         if (Date.now() - messages.array()[x].createdTimestamp <= 60000) {
-                            DeadLockerAPI.monitorMap.push({sku:messages.array()[x].embeds[0].fields[1].value}); 
+                            SneakerAPI.monitorMap.push({sku:messages.array()[x].embeds[0].fields[1].value}); 
                         }
                     }
                 });
@@ -122,7 +122,7 @@ class DeadLockerAPI {
         }
 
         server.get('/', function(request, response) {
-            response.send("DeadLockerAPI | Copyright © 2020-2021 DeadLocker, LLC | All rights reserved.");
+            response.send("SneakerAPI | Copyright © 2020-2021 SneakerAPI, LLC | All rights reserved.");
             return null;
         });
 
@@ -257,11 +257,11 @@ class DeadLockerAPI {
             try {
                 var body = Json.parse(Std.string(Security.APIPrivateKey.decrypt(request.body, 'utf8')));
                 var currentSizes:Array<String> = [];
-                for (i in 0...DeadLockerAPI.sizeMap.length) {
-                    if (body.size.split('-')[0] == DeadLockerAPI.sizeMap[i]) {
-                        for (b in i...DeadLockerAPI.sizeMap.length) {
-                            currentSizes.push(DeadLockerAPI.sizeMap[b]); 
-                            if (body.size.split('-')[1] == DeadLockerAPI.sizeMap[b]) {
+                for (i in 0...SneakerAPI.sizeMap.length) {
+                    if (body.size.split('-')[0] == SneakerAPI.sizeMap[i]) {
+                        for (b in i...SneakerAPI.sizeMap.length) {
+                            currentSizes.push(SneakerAPI.sizeMap[b]); 
+                            if (body.size.split('-')[1] == SneakerAPI.sizeMap[b]) {
                                 break; 
                             }
                         }
