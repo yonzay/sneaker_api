@@ -9,8 +9,8 @@
 -cp externs/node
 -cp externs/colors
 -cp externs/bson
--main DeadLockerAPI
+-main SneakerAPI
 -lib hxnodejs
 -lib closure
--js export/DeadLockerAPI.js
+-js export/SneakerAPI.js
 -D closure_overwrite
