@@ -15,7 +15,7 @@ class SneakerAPI {
     public static var sizeMap:Array<String> = ["01.0", "01.5", "02.0", "02.5", "03.0", "03.5", "04.0", "04.5", "05.0", "05.5", "06.0", "06.5", "07.0", "07.5", "08.0", "08.5", "09.0", "09.5", "10.0", "10.5", "11.0", "11.5", "12.0", "12.5", "13.0", "13.5", "14.0", "14.5", "15.0", "15.5", "16.0", "16.5", "17.0", "17.5", "18.0", "18.5", "19.0", "19.5", "20.0" ];
     public static var Discord = Syntax.code("require")("discord.js");
     public static var client = Syntax.code("new SneakerAPI.Discord.Client")();
-    public static var url = 'mongodb+srv://DeadLockerAdmin:1ijZJze5j7y0jiVB@cluster0.ekqdp.mongodb.net';
+    public static var url = '';
     public static var dbName = 'DeadLocker';
     public static var collections:Array<String> = ['Licenses', 'Sessions', 'Keys', 'CheckOuts'];
     public static var licenses:Dynamic;
@@ -24,7 +24,7 @@ class SneakerAPI {
     public static var keys:Dynamic;
     public static var adminToken = "3f8d40ad6a1d0038b8c334303fe06e70df25a1b78220855f6acc3aec951ffb3b";
     public static var monitorMap = [];
-    public static var version = Sha256.encode("V1.5.0 Saturday, April 10th, 2021");
+    public static var version = Sha256.encode("V1.5.0 Saturday, April 10th, 2020");
     var monitor = new Timer(1000 * 30);
     var filter = new Timer(1000 * 60);
     var host = '0.0.0.0';
